@@ -137,6 +137,7 @@ Self-submissions are welcome. This is an editorial, intentionally incomplete lis
 
 - [Awesome Modern Spring Boot](https://github.com/ejboy/awesome-modern-spring-boot) - Broader curated coverage of modern Spring Boot development tools and practices.
 - [Awesome Efficient Devtools](https://github.com/ejboy/awesome-efficient-devtools) - Tools and practices for efficient development workflows.
+- [Efficient Self-Hosting on daily.dev](https://daily.dev/squads/efficientselfhosting) - Community discussions about practical, lightweight self-hosting, small VPS deployments, monitoring, performance, and operations.
 
 ## Maintainer note
 
