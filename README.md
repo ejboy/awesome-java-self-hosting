@@ -32,6 +32,7 @@ The advice applies to Spring Boot, Quarkus, Micronaut, plain Java services, and 
 - [Spring Boot Cloud Native Buildpacks](https://docs.spring.io/spring-boot/reference/packaging/container-images/cloud-native-buildpacks.html) - Build OCI images without maintaining a Dockerfile for straightforward container deployments.
 - [Docker multi-stage builds](https://docs.docker.com/build/building/multi-stage/) - Keep build tooling out of the final image when you need a custom container image.
 - [jlink](https://docs.oracle.com/en/java/javase/25/docs/specs/man/jlink.html) - Create a smaller custom runtime image when you can own and validate the resulting module set.
+- [Spring Boot fat JAR vs extracted layout](https://pvrlabs.xyz/articles/spring-boot-extracted-layout.html) - A paired experiment on a 256 MiB VM found faster startup and first requests with Spring Boot's extracted layout, with no material change in settled memory; measure the effect for your application before changing its packaging.
 
 Containers and native images have real operational tradeoffs. Use them when they simplify delivery, improve density, or meet a concrete startup or footprint requirement; an executable JAR is often the easier first deployment.
 
@@ -104,6 +105,7 @@ Measure before tuning. Capture workload, CPU, latency, garbage collection, heap,
 ## Small-server efficiency
 
 - [Spring Boot memory usage experiments](https://github.com/dsyer/spring-boot-memory-blog) - Measured experiments on Spring application memory, including heap, native memory, container limits, and dependency choices; treat older measurements as methodology, not current sizing promises.
+- [Spring Boot JPA vs JDBC experiment](https://pvrlabs.xyz/java-performance/experiments/spring-boot-jpa-vs-jdbc.html) - A small app used about 90 MiB less resident memory and reached its first dashboard response sooner with Spring JDBC than with JPA and Hibernate; the comparison measures complete app variants on one Mac, so benchmark your own workload before choosing a persistence stack.
 - [PVR Labs small-server experiments](https://github.com/PVRLabs/experiments/tree/main/statlite/tierhive-recipe-256mb) - A reproducible Java-on-a-small-VPS deployment experiment with a 256 MiB host and measured application and monitoring behavior.
 - [Compact Object Headers in the JDK 27 Java command reference](https://docs.oracle.com/en/java/javase/27/docs/specs/man/java.html) - They reduce heap footprint; they are enabled by default in JDK 27, while JDK 25 requires `-XX:+UseCompactObjectHeaders`. Benchmark the behavior on your target JDK and workload before overriding the default.
 
