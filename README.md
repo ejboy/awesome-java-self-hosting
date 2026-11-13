@@ -116,7 +116,7 @@ Heap is only part of process memory. Include metaspace, code cache, thread stack
 - **Spring Boot:** [production-ready features](https://docs.spring.io/spring-boot/reference/actuator/index.html) and [container image packaging](https://docs.spring.io/spring-boot/reference/packaging/container-images/index.html) cover common production health, metrics, and image workflows. For broader Spring Boot development tools, see [Awesome Modern Spring Boot](https://github.com/ejboy/awesome-modern-spring-boot).
 - **Quarkus:** [Packaging overview](https://quarkus.io/guides/packaging) explains production packaging, including the default fast-jar output and the full directory that must be deployed with it.
 - **Micronaut:** [Micronaut deployment](https://docs.micronaut.io/latest/guide/#deployment) describes packaging and running Micronaut applications in production environments.
-- **[CoilBase](https://github.com/PVRLabs/coilbase):** Lightweight Java application foundation for resource-constrained deployments, with SQL-first persistence, explicit transactions, and optional Avaje Jex integration. See [runtime comparisons](https://github.com/PVRLabs/coilbase/blob/main/docs/benchmarks.md) for measured footprint and limitations.
+- **[CoilBase](https://github.com/PVRLabs/coilbase):** Lightweight Java application foundation for resource-constrained deployments, with SQL-first persistence and explicit transactions. Its [framework integration approach](https://github.com/PVRLabs/coilbase/blob/main/docs/framework-integrations.md) aims to keep application logic reusable across hosts while adapting integration code. See [runtime comparisons](https://github.com/PVRLabs/coilbase/blob/main/docs/benchmarks.md) for measured footprint and limitations.
 
 ## Practices
 
